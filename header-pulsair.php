@@ -28,7 +28,7 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 			'items_wrap'     => '<ul class="navigation__list">%3$s</ul>',
 		); ?>
 		<nav id="sites-navigation" class="navigation clearfix">
-			<input type="checkbox" id="more" class="toggle"><div class="navigation__inner"><div class="navigation__logo"><a href="#" class="navigation__link">Industries</a></div>
+			<input type="checkbox" id="more" class="toggle" style="z-index:-1;"><div class="navigation__inner" style="z-index: 1000;"><div class="navigation__logo"><a href="#" class="navigation__link">Industries</a></div>
 			<?php wp_nav_menu($siteargs);//extract the content from apperance-> nav menu ?>
 			<div class="navigation__toggle"><label for="more" class="navigation__link">More</label></div></div>
 		</nav> <!-- end #site-navigation -->
