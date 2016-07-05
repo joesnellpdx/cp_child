@@ -20,19 +20,6 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<!-- Masthead ============================================= -->
-	<?php
-	if (has_nav_menu('sites')) { ?>
-		<?php $siteargs = array(
-			'theme_location' => 'sites',
-			'container'      => '',
-			'items_wrap'     => '<ul class="navigation__list">%3$s</ul>',
-		); ?>
-		<nav id="sites-navigation" class="navigation clearfix">
-			<input type="checkbox" id="more" class="toggle" style="z-index:-1;"><div class="navigation__inner" style="z-index: 1000;"><div class="navigation__logo"><a href="#" class="navigation__link">Industries</a></div>
-			<?php wp_nav_menu($siteargs);//extract the content from apperance-> nav menu ?>
-			<div class="navigation__toggle"><label for="more" class="navigation__link">More</label></div></div>
-		</nav> <!-- end #site-navigation -->
-	<?php } ?>
 	<header id="masthead" class="site-header">
 		<?php
 		if($header_image = $freesiaempire_settings['freesiaempire_display_header_image'] == 'top'){

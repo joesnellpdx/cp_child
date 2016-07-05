@@ -22,13 +22,13 @@ function get_attachment_id_from_src($url) {
 	return $attachment[0];
 }
 
-function register_multiple_menus() {
-
-	register_nav_menus( array(
-		'sites' => 'Sites Menu',
-	) );
-}
-add_action( 'init', 'register_multiple_menus' );
+//function register_multiple_menus() {
+//
+//	register_nav_menus( array(
+//		'sites' => 'Sites Menu',
+//	) );
+//}
+//add_action( 'init', 'register_multiple_menus' );
 
 /**
  * Add custom li class to site navigation
