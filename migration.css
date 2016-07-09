@@ -1,0 +1,184 @@
+.page-template-pulsair-corporate #content {
+    padding: 0;
+}
+}
+
+h1.page-title--custom {
+    font-size: 28px;
+    line-height: 35px;
+    color: #545454;
+}
+@media only screen and (max-width: 767px) {
+    h1.page-title--custom {
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    h1.page-title--custom {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+.our_feature .feature-icon.feature-image {
+    width: 100%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    display: block;
+    overflow:hidden;
+    height: auto;
+    box-sizing: border-box;
+}
+.our_feature .feature-icon.feature-image img {
+    width: 100%;
+    height: auto;
+}
+.navigation {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    height: 50px; }
+.navigation__inner {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 900px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+.toggle:checked ~ .navigation__inner {
+    height: auto; }
+.navigation__link {
+    display: block;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer; }
+.navigation__link:hover {
+    text-decoration: underline; }
+.navigation__logo {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    border-left: 1px solid #ccc; }
+.navigation__logo .navigation__link {
+    font-weight: bold; }
+.navigation__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-right: 0;
+    background: #fff;
+    z-index: 1000;
+    position: relative;}
+@media screen and (max-width: 400px) {
+    .navigation__item {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%; } }
+.navigation__toggle {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; }
+.navigation__toggle .navigation__link {
+    position: relative;
+    padding-right: 50px; }
+.navigation__toggle .navigation__link:after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #000 transparent transparent transparent; }
+.toggle:checked ~ .navigation .navigation__toggle .navigation__link:after {
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #000 transparent; }
+.toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+/***
+
+[section_block title="Test Title" subtitle="This is subtitle / descriptive content"]
+
+[column_block]
+
+[cta_block link="http://industrial.puslair.com" title="Industrial Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the industrial industry.
+
+[/cta_block]
+
+[cta_block link="http://wine.puslair.com" title="Wine Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the wine industry.
+
+[/cta_block]
+
+[cta_block link="http://oil.puslair.com" title="Oil Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the oil industry.
+
+[/cta_block]
+
+[cta_block link="http://railcar.puslair.com" title="Railcar Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the railcar industry.
+
+[/cta_block]
+
+[cta_block link="http://diving.puslair.com" title="Diving Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the diving industry.
+
+[/cta_block]
+
+[cta_block link="http://food.puslair.com" title="Food Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the food industry.
+
+[/cta_block]
+
+[cta_block link="http://water.puslair.com" title="Water" Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the water industry.
+
+[/cta_block]
+
+[cta_block link="http://agriculture.puslair.com" title="Agriculture Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the agriculture industry.
+
+[/cta_block]
+
+[cta_block link="http://wastewater.puslair.com" title="Wastewater Products" image="/wp-content/uploads/2016/06/stock-photo-74080199-scenic-tuscany-landscape-at-sunrise-val-d-orcia-italy.jpg"]
+
+View our amazing products for the wastewater industry.
+
+[/cta_block]
+
+[/column_block]
+
+[/section_block]
+
+&nbsp;
+
+**/

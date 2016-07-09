@@ -1,0 +1,29 @@
+////
+/// @group Layout
+////
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+.wrapper {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
+.container {
+  padding-top: $space-double;
+  padding-bottom: $space-double;
+  &__content {
+    max-width: $max-width;
+    padding-left: $space-triple;
+    padding-right: $space-triple;
+    margin: 0 auto;
+  }
+}
+
+.page-content {
+  flex: 1;
+}
