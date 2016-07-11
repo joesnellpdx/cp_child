@@ -70,10 +70,10 @@ h1.page-title--custom {
   margin: 0px; }
   .our_feature .feature-icon.feature-image img {
     width: 100%;
-    height: auto; }
+    height: 100%; }
 
 .feature__figure {
-  padding-top: 60%; }
+  padding-top: 80%; }
 
 .feature__caption {
   padding: 1em;

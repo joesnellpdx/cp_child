@@ -40,7 +40,7 @@ h1.page-title--custom {
       margin: 0px;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
       }
     }
   }
@@ -48,7 +48,7 @@ h1.page-title--custom {
 
 .feature {
   &__figure {
-    padding-top: 60%;
+    padding-top: 80%;
   }
   &__caption {
     padding: 1em;
