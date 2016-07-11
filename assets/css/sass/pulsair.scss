@@ -22,7 +22,7 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 
 // GLOBAL
 //@import "global/functions";
-//@import "global/variables"; // includes sanitize
+@import "global/variables";
 //@import "global/mixins";
 
 // BASE
@@ -37,7 +37,7 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 //@import "components/navigations";
 //@import "components/buttons";
 //@import "components/forms";
-//@import "components/media";
+@import "components/media";
 //@import "components/post";
 @import "components/home-grid";
 

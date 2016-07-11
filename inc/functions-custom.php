@@ -5,9 +5,30 @@
  */
 
 /**
+ * Hide page stuff
+ */
+function hide_page_stuff() {
+	remove_post_type_support( 'page', 'comments' );
+}
+add_action('init', 'hide_page_stuff');
+
+/**
+ * Add custom iage sizes
+ */
+function twenty_eleven_child_add_image_size() {
+	add_image_size( 'rwd-small', 400, 240 );
+	add_image_size( 'rwd-medium', 800, 480 );
+	add_image_size( 'rwd-large', 1200, 720 );
+	add_image_size( 'rwd-mediumx2', 1600, 960 );
+	add_image_size( 'rwd-xl', 2000, 1200 );
+	add_image_size( 'rwd-largex2', 2400, 1440 );
+	add_image_size( 'rwd-xlx2', 4000, 2400 );
+}
+add_action( 'after_setup_theme', 'twenty_eleven_child_add_image_size', 11 );
+
+/**
  * GET IMAGE ID FROM SRC
  */
-
 function get_attachment_id_from_src($url) {
 	global $wpdb;
 	$prefix = $wpdb->prefix;

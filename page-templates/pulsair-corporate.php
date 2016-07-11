@@ -18,9 +18,30 @@ if(is_home()){
 }
 
 echo '<div id="main">';
-echo do_shortcode(get_post_field('post_content', $the_page_id));
+echo '<section class="our_feature">';
+echo '<div class="container clearfix">';
+echo '<div class="container_container">';
+$p_title = get_post_meta( $the_page_id, '_pacorp_title', true );
+$p_subtitle = get_post_meta( $the_page_id, '_pacorp_subtitle', true );
+$p_grid  = get_post_meta( $the_page_id, '_pacorp_grid', true);
 
-	echo '</div> <!-- entry-content clearfix-->';
+if(empty($p_title)){
+	$p_title = get_the_title($the_page_id);
+}
+echo '<h1 class="page-title--custom freesia-animation fadeInUp">' . $p_title . '</h1>';
+
+if(!empty($p_subtitle)){
+	echo '<div class="feature-sub-title freesia-animation fadeInUp">' . wpautop($p_subtitle) . '</div>';
+}
+
+if((!empty($p_grid)) && ($p_grid == 'on') ) {
+	echo pa_page_grids($the_page_id);
+}
+echo do_shortcode(get_post_field('post_content', $the_page_id));
+echo '</div>';
+echo '</div>';
+echo '</section';
+//	echo '</div> <!-- entry-content clearfix-->';
 if($freesiaempire_settings['freesiaempire_disable_features'] != 1){
 	echo '<!-- Our Feature ============================================= -->';
 	global $post;

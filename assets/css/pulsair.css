@@ -16,6 +16,30 @@ All files, unless otherwise stated, are released under the GNU General Public Li
 version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 ==================================================
 */
+/*------------------------------------*    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*    $Sanitize Variables
+\*------------------------------------*/
+/*------------------------------------*	$MEDIA
+\*------------------------------------*/
+.img-fit {
+  position: relative;
+  background-color: #6897e5; }
+  .img-fit.compat-object-fit {
+    background-size: cover;
+    background-position: center center; }
+    .img-fit.compat-object-fit img {
+      opacity: 0;
+      display: none; }
+  .img-fit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+
 .page-template-pulsair-corporate #content {
   padding: 0; }
 
@@ -23,120 +47,50 @@ h1.page-title--custom {
   font-size: 28px;
   line-height: 35px;
   color: #545454; }
+  @media only screen and (max-width: 767px) {
+    h1.page-title--custom {
+      padding-bottom: 10px; } }
+  @media only screen and (max-width: 1023px) {
+    h1.page-title--custom {
+      font-size: 22px;
+      line-height: 30px; } }
 
-@media only screen and (max-width: 767px) {
-  h1.page-title--custom {
-    padding-bottom: 10px; } }
+.feature__figure {
+  padding-top: 60%; }
 
-@media only screen and (max-width: 1023px) {
-  h1.page-title--custom {
-    font-size: 22px;
-    line-height: 30px; } }
-
-.our_feature .feature-icon.feature-image {
-  width: 100%;
-  border-radius: 0px;
-  padding: 0px;
-  display: block;
-  overflow: hidden;
-  height: auto;
-  box-sizing: border-box; }
-
-.our_feature .feature-icon.feature-image img {
-  width: 100%;
-  height: auto; }
-
-.navigation {
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  background: #fff;
-  height: 50px; }
-
-.navigation__inner {
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 900px;
-  height: 50px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background: transparent; }
-
-.toggle:checked ~ .navigation__inner {
-  height: auto; }
-
-.navigation__link {
-  display: block;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 50px;
-  text-decoration: none;
-  color: #000;
-  cursor: pointer; }
-
-.navigation__link:hover {
-  text-decoration: underline; }
-
-.navigation__logo {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  border-left: 1px solid #ccc; }
-
-.navigation__logo .navigation__link {
-  font-weight: bold; }
-
-.navigation__list {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-top: 0;
-  border-right: 0;
-  background: #fff;
-  z-index: 1000;
-  position: relative; }
-
-@media screen and (max-width: 400px) {
-  .navigation__item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%; } }
-
-.navigation__toggle {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background: #fff;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
-
-.navigation__toggle .navigation__link {
-  position: relative;
-  padding-right: 50px; }
-
-.navigation__toggle .navigation__link:after {
-  content: '';
+.feature__caption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  backface-visibility: hidden;
   position: absolute;
-  top: 22px;
-  right: 20px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 5px 0 5px;
-  border-color: #000 transparent transparent transparent; }
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .feature__caption:before, .feature__caption:after {
+    pointer-events: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s; }
+  .feature__caption:before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: scale(0, 1); }
+  .feature__caption:after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: scale(1, 0); }
 
-.toggle:checked ~ .navigation .navigation__toggle .navigation__link:after {
-  border-width: 0 5px 5px 5px;
-  border-color: transparent transparent #000 transparent; }
-
-.toggle {
-  position: absolute;
-  opacity: 0; }
+.feature:hover .feature__caption:before, .feature:hover .feature__caption:after {
+  opacity: 1;
+  transform: scale(1); }
 
 /*------------------------------------*    $SHAME
 \*------------------------------------*/

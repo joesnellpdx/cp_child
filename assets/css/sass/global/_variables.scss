@@ -51,7 +51,7 @@ $information: #000DB5;
 
 /// Color brand__one
 /// @type Color
-$brand__one: #F80;
+$brand__one: #6897e5;
 /// Color brand__two
 /// @type Color
 $brand__two: $gray__light;
@@ -317,4 +317,4 @@ $table-border-spacing: 0;
 $textarea-resize: vertical;
 
 /// Import Sanitize
-@import "../../../../bower_components/sanitize-css/lib/sanitize.scss";
+//@import "../../../../bower_components/sanitize-css/lib/sanitize.scss";

@@ -8,7 +8,7 @@
  */
 ?>
 	<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html class="no-js" <?php language_attributes(); ?>>
 <?php
 $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 	<head>
