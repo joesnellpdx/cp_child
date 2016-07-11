@@ -79,3 +79,16 @@ function site_menu_link_classes( $atts, $item, $args ) {
 	return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'site_menu_link_classes', 10, 3 );
+
+/**
+ * Allow RICG Image Compression
+ */
+function custom_theme_setup() {
+	add_theme_support( 'advanced-image-compression' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
+
+/**
+ * Filter Yoast Meta Priority - move below meta boxes
+ */
+add_filter( 'wpseo_metabox_prio', function() { return 'low';});
