@@ -24,8 +24,7 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 \*------------------------------------*/
 .img-fit {
   position: relative;
-  background-color: #9e5406;
-  background-color: red; }
+  background-color: #9e5406; }
   .img-fit.compat-object-fit {
     background-size: cover;
     background-position: center center; }
@@ -73,7 +72,7 @@ h1.page-title--custom {
     height: 100%; }
 
 .feature__figure {
-  padding-top: 80%; }
+  padding-top: 60%; }
 
 .feature__caption {
   padding: 1em;
