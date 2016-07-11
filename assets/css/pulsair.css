@@ -24,7 +24,7 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 \*------------------------------------*/
 .img-fit {
   position: relative;
-  background-color: #6897e5; }
+  background-color: #9e5406; }
   .img-fit.compat-object-fit {
     background-size: cover;
     background-position: center center; }
@@ -146,6 +146,9 @@ h1.page-title--custom {
 .feature:hover .feature__caption:before, .feature:hover .feature__caption:after {
   opacity: 1;
   transform: scale(1); }
+
+.feature:hover img {
+  opacity: 0.6; }
 
 /*------------------------------------*    $SHAME
 \*------------------------------------*/

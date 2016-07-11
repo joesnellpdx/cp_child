@@ -21,6 +21,10 @@ h1.page-title--custom {
 .feature-content {
   &--grid {
     padding: 0px;
+    &:hover {
+      //margin: 0px;
+      //box-shadow: none;
+    }
   }
 }
 .our_feature {
@@ -131,6 +135,9 @@ h1.page-title--custom {
           transform: scale(1);
         }
       }
+    }
+    img {
+      opacity: 0.6;
     }
   }
 }
