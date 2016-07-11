@@ -8,8 +8,8 @@
 
 .img-fit {
   position: relative;
-  //background-color: $brand__one;
   background-color: $brand__two;
+  background-color: red;
   &.compat-object-fit {
     background-size: cover;
     background-position: center center;

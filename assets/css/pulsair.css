@@ -24,7 +24,8 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 \*------------------------------------*/
 .img-fit {
   position: relative;
-  background-color: #9e5406; }
+  background-color: #9e5406;
+  background-color: red; }
   .img-fit.compat-object-fit {
     background-size: cover;
     background-position: center center; }
