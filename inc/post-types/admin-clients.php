@@ -136,79 +136,8 @@ function client_logos_shortcode($atts, $content=null){
 		$html .= '</figure>';
 		$html .= '</div>';
 
-
-		//// del
-
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-			$html .= '<div class="six-column freesia-animation fadeInLeft" data-wow-delay="0.1s">';
-			$html .= '<figure class="feature__figure feature__figure--clients img-fit">';
-			$html .= '<img src="' .  $img_src . '" ' .  $srcset . ' sizes="100vw" alt="' .  $alt . '" data-fallback-img="' . $img_fallback . '">';
-
-			$html .= '</figure>';
-			$html .= '</div>';
-
-
-			///// del
-
-
-
 		endwhile;
 		wp_reset_postdata();
-
-
 
 	$html .= '</div>';
 	$html .= '</div>';
