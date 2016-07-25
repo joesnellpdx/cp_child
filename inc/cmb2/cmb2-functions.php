@@ -97,6 +97,38 @@ function jspdx_register_grid_item_metabox( ) {
 add_filter( 'cmb2_init', 'jspdx_register_grid_item_metabox' );
 
 /**
+ * Grid Items
+ */
+function jspdx_register_client_item_metabox( ) {
+
+	// Start with an underscore to hide fields from custom fields list
+	$gi_prefix = '_cltm_';
+
+	$meta_boxes = new_cmb2_box( array(
+		'id' => 'client_item',
+		'title' => __( 'Client Item Options', 'cmb2' ),
+		'object_types'  => array( 'pt_client', ), // Post type
+//		'show_on'      => array( 'key' => 'page-template', 'value' => array( 'default', ''), ),
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names'    => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		// 'closed'     => true, // Keep the metabox closed by default
+	));
+
+
+	$meta_boxes->add_field( array(
+		'name'    => __( 'Background Image', 'cmb2' ),
+		'id'      => $gi_prefix . 'bg',
+		'desc'    => 'Recommend 362px x 140px .png file.',
+		'type'    => 'file',
+	) );
+
+
+}
+add_filter( 'cmb2_init', 'jspdx_register_client_item_metabox' );
+
+/**
  * Metabox for Page Template
  * @author Kenneth White
  * @link https://github.com/WebDevStudios/CMB2/wiki/Adding-your-own-show_on-filters

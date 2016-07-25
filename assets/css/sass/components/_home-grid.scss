@@ -1,3 +1,54 @@
+.six-column {
+  float: left;
+  padding: 0 5px 40px;
+}
+
+#primary .six-column {
+  width: 50%;
+}
+
+.six-column,
+.six-column-full-width {
+  width: 16.66667%;
+}
+
+#primary .six-column:nth-child(6n+7) {
+  clear: none;
+}
+,
+.six-column:nth-child(6n+7),
+#primary .six-column:nth-child(5n+6) {
+  clear: both;
+}
+
+@media only screen and (max-width: 1023px) {
+  .six-column {
+    padding: 0  5px 40px;
+  }
+  .six-column {
+    width: 50%;
+  }
+  .six-column:nth-child(6n+7) {
+    clear: none;
+  }
+  .six-column:nth-child(2n+3) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .six-column,
+  #primary .six-column {
+    margin: 0;
+    width: 100%;
+  }
+  .six-column:nth-child(5n+6) {
+    clear: none;
+  }
+}
+
+// page styles
+
 .page-template-pulsair-corporate {
   #content {
     padding: 0;
@@ -45,10 +96,12 @@ h1.page-title--custom {
     }
   }
 }
-
 .feature {
   &__figure {
     padding-top: 60%;
+    &--clients {
+      padding-top: 38.67%;
+    }
   }
   &__caption {
     padding: 1em;

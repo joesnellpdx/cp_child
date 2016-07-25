@@ -9,6 +9,9 @@
 .img-fit {
   position: relative;
   background-color: $brand__two;
+  .column--clients & {
+    background-color: transparent;
+  }
   &.compat-object-fit {
     background-size: cover;
     background-position: center center;

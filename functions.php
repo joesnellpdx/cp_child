@@ -27,7 +27,4 @@ require get_stylesheet_directory()  . '/inc/functions-custom.php';
 require get_stylesheet_directory()  . '/inc/cmb2/cmb2-functions.php';
 require get_stylesheet_directory()  . '/inc/shortcodes.php';
 require get_stylesheet_directory()  . '/inc/post-types/admin-grids.php';
-
-
-
-?>
+require get_stylesheet_directory()  . '/inc/post-types/admin-clients.php';
