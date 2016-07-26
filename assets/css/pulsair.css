@@ -309,7 +309,7 @@ h1.page-title--custom {
         border-color: #9e5406; } }
   @media all and (min-width: 66rem) {
     .puls-tabs__tab {
-      width: 16.66667%; } }
+      width: 25%; } }
 
 .puls-tab-item {
   width: 100%;
