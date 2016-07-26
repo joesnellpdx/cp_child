@@ -208,5 +208,35 @@ h1.page-title--custom {
 .feature:hover img {
   opacity: 0.6; }
 
+/*------------------------------------*    $CUSTOM LAYOUT
+\*------------------------------------*/
+.puls-quote {
+  display: block;
+  overflow: hidden; }
+
+.grid-left,
+.grid-right {
+  display: block;
+  width: 100%; }
+  @media only screen and (min-width: 767px) {
+    .grid-left,
+    .grid-right {
+      width: 50%;
+      float: left; } }
+
+.grid-left {
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 767px) {
+    .grid-left {
+      margin-bottom: 0px;
+      padding-right: 10px; } }
+  @media only screen and (min-width: 1023px) {
+    .grid-left {
+      width: 25%; } }
+
+@media only screen and (min-width: 1023px) {
+  .grid-right {
+    width: 75%; } }
+
 /*------------------------------------*    $SHAME
 \*------------------------------------*/

@@ -108,13 +108,11 @@ function get_started_shortcode($atts, $content){
 		'link' => '',
 	), $atts );
 
-	if(empty($link)){
+	if(empty($a['link'])){
 		$contact_url = network_site_url() . 'contact/';
 	} else {
-		$contact_url = $link;
+		$contact_url = $a['link'];
 	}
-
-
 
 	$html = '';
 
@@ -123,3 +121,76 @@ function get_started_shortcode($atts, $content){
 	return $html;
 }
 add_shortcode( 'get_started', 'get_started_shortcode' );
+
+/**
+ * Blockquote shortcode
+ *
+ * [quote]
+ */
+function quote_shortcode($atts, $content){
+
+	$html = '';
+
+	$newer_content = pulsair_remove_empty_p($content);
+	$newest_content = preg_replace('#^<\/p>|<p>$#', '', $newer_content);
+
+	$html .= '<blockquote class="puls-quote">' . do_shortcode($newest_content) . '</blockquote>';
+
+	return $html;
+}
+add_shortcode( 'quote', 'quote_shortcode' );
+
+/**
+ * Cite shortcode
+ *
+ * [cite]
+ */
+function cite_shortcode($atts, $content){
+
+
+	$html = '';
+
+	$newest_content = pulsair_remove_empty_p($content);
+
+	$html .= '<cite>— ' . do_shortcode($newest_content) . '</cite>';
+
+	return $html;
+}
+add_shortcode( 'cite', 'cite_shortcode' );
+
+/**
+ * Grid left
+ *
+ * [grid_left]
+ */
+function grid_left_shortcode($atts, $content){
+
+	$html = '';
+
+	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+	$new_content =  preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+
+	$newest_content = pulsair_remove_empty_p($new_content);
+
+	$html .= '<div class="grid-left">' . do_shortcode($newest_content) . '</div>';
+
+	return $html;
+}
+add_shortcode( 'grid_left', 'grid_left_shortcode' );
+
+/**
+ * Grid right
+ *
+ * [grid_right]
+ */
+function grid_right_shortcode($atts, $content){
+
+	$html = '';
+
+	$newest_content = pulsair_remove_empty_p($content);
+
+	$html .= '<div class="grid-right">' . do_shortcode($newest_content) . '</div>';
+
+	return $html;
+}
+add_shortcode( 'grid_right', 'grid_right_shortcode' );

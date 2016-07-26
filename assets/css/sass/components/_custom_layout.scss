@@ -1,0 +1,40 @@
+////
+/// @group Components
+////
+
+/*------------------------------------*\
+    $CUSTOM LAYOUT
+\*------------------------------------*/
+
+.puls-quote {
+  display: block;
+  overflow: hidden;
+}
+
+.grid-left,
+.grid-right {
+  display: block;
+  width: 100%;
+  @media only screen and (min-width: 767px) {
+    width: 50%;
+    float: left;
+  }
+
+}
+.grid-left {
+  margin-bottom: 10px;
+  @media only screen and (min-width: 767px) {
+    margin-bottom: 0px;
+    padding-right: 10px;
+  }
+  @media only screen and (min-width: 1023px) {
+    width: 25%;
+  }
+
+}
+.grid-right {
+  @media only screen and (min-width: 1023px) {
+    width: 75%;
+  }
+
+}

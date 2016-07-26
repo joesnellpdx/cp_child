@@ -92,3 +92,20 @@ add_action( 'after_setup_theme', 'custom_theme_setup' );
  * Filter Yoast Meta Priority - move below meta boxes
  */
 add_filter( 'wpseo_metabox_prio', function() { return 'low';});
+
+
+function pulsair_remove_empty_p( $content ) {
+	$array = array (
+		'<p>[' => '[',
+		']</p>' => ']',
+		']<br />' => ']'
+	);
+
+	$newcontent = strtr($content, $array);
+	$newercontent = preg_replace(
+		array('{<a(.*?)(wp-att|wp-content/uploads)[^>]*><img}',
+			'{ wp-image-[0-9]*" /></a>}'),
+		array('<img','" />'),
+		$newcontent);
+	return $newercontent;
+}
