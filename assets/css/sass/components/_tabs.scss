@@ -1,0 +1,168 @@
+.puls-tabs {
+  display: block;
+
+  width: 100%;
+  // overflow: hidden;
+
+  margin-bottom: $pad-half;
+  padding: $pad-half 0px;
+  &__title {
+    display: block;
+
+  }
+  &__ul {
+    .entry-content & {
+      display: block;
+      display: none;
+      overflow: hidden;
+
+      padding: 0;
+
+      list-style: none;
+
+      margin: $pad-half (-$pad-half) (-$pad-half);
+    }
+  }
+  &__items {
+    margin: $pad-half 0px;
+  }
+  &__tab {
+    padding: $pad-half;
+  }
+  &__tab-link {
+    font-weight: normal;
+    line-height: 1;
+
+    display: inline-block;
+
+    width: 100%;
+    margin: 0px;
+    margin: 0px;
+    padding: 1.2em 1.8em;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: $white;
+    border: 0;
+    outline: none;
+    background: $brand__one;
+    i {
+      font-size: 1rem;
+
+      display: inline;
+
+      margin: 0 0.5em 0 0;
+    }
+    &.sr-active,
+    &:hover,
+    &:focus {
+      color: $white;
+      background: darken($brand__one, 20%);
+    }
+  }
+  .js & {
+    &__ul {
+      display: block;
+    }
+    &__items {
+      position: relative;
+    }
+  }
+  @media all and (min-width: $bp-med) {
+    &__tab {
+      display: inline;
+      float: left;
+
+      width: 33.3333333333333%;
+
+      padding: $pad-half;
+    }
+    &__tab-link {
+      width: 100%;
+      margin-bottom: 0;
+      padding: $pad 0px;
+      //width: auto;
+      //border: 0px solid $linkColor;
+      //border-bottom: 10px solid $light;
+
+      transition: all 0.4s ease-out;
+      text-align: center;
+
+      min-height: 62px;
+      width: 100%;
+      i {
+        font-size: 2em;
+
+        display: block;
+
+        margin: 0 0 $pad-half 0;
+      }
+      &.sr-active {
+        // border: 0px solid $brand__two;
+        border-color: $brand__two;
+        // border-bottom: 10px solid $brand__two;
+      }
+    }
+  }
+  @media all and (min-width: $bp-large-2) {
+    &__tab {
+      width: 16.66667%;
+    }
+  }
+}
+
+.puls-tab-item {
+  width: 100%;
+  margin: 0px 0px $pad-half;
+
+  border: 2px solid $brand__one;
+  background: $white;
+  &__inner {
+    display: block;
+    overflow: hidden;
+
+    padding: $pad;
+  }
+  &__content-contain {
+    .img-list {
+      margin: 0px;
+    }
+  }
+  &__close {
+    display: none;
+  }
+  .js & {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    transition: max-height 1s ease-out, opacity 1s ease-out;
+    // max-height: 0px;
+
+    opacity: 0;
+
+    .btn-small {
+      width: auto;
+      margin-bottom: 0;
+      padding: 0.75em 1em;
+
+      text-align: right;
+      text-transform: none;
+    }
+    &.sr-active {
+      position: relative;
+      // max-height: 3000px;
+      z-index: 5000;
+
+      opacity: 1;
+    }
+    &__close {
+      display: inline-block;
+      clear: both;
+    }
+  }
+}

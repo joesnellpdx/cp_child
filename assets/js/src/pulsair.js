@@ -8,7 +8,7 @@
  * Theme functions file.
  */
 
-( function( window, undefined ) {
+( function( $, window, undefined ) {
 	'use strict';
 
 	var document = window.document;
@@ -53,4 +53,71 @@
 		return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
 	}
 
-} )( this );
+	var tabScrollToParent = function() {
+
+	   var trigger = '.puls-tab-item__close';
+
+	   $('body').on('click', trigger, function(e) {
+	       var target = $(this.hash),
+	           tabId = $(this).data('tab-id'),
+	           tabItem = $('#' + tabId);
+	       tabTab = $('a[href=#' + tabId + ']');
+
+	       tabItem.removeClass('sr-active');
+	       tabTab.removeClass('sr-active');
+
+	       // (tabId, tabTab).removeClass('sr-active');
+
+	       if (target.length) {
+	           $('html,body').animate({
+	               scrollTop: target.offset().top
+	           }, 1000);
+	           // return false;
+	       }
+
+	   });
+	};
+
+	var tabsTabActive = function(){
+	   var trigger = '.puls-tabs__tab-link',
+	       scrollTarget = '';
+
+	   //$('body').find('.puls-tabs-container').parents('.section-inner').css('padding', '0px');
+
+	   $('body').on('click', trigger, function(evt) {
+	       evt.preventDefault();
+	       var target = $(this.hash),
+	           tabs = '.puls-tab-item, .puls-tabs__tab a';
+	       $(tabs).removeClass('sr-active');
+	       $(this).addClass('sr-active');
+	       target.addClass('sr-active');
+	       //if (matchMedia('only screen and (min-width: 768px)').matches) {
+	       //    scrollTarget = target.closest('.section-inner');
+	       //} else {
+	       //    scrollTarget = target.parents('.puls-tabs-container').find('.panel-container');
+	       //}
+
+	       //$('#outer-wrap').animate({
+	       //    scrollTop: scrollTarget.offset().top
+	       //}, 1000);
+
+	       var scrollTarg = $('.puls-tabs');
+		   $('html,body').animate({
+				   scrollTop: scrollTarg.offset().top},
+			   'slow');
+
+	   });
+	};
+
+	var pulsTabOpen = function(){
+	   $('body').find('.puls-tabs:first').find('.puls-tabs__tab-link:first, .puls-tab-item:first').addClass('sr-active');
+	};
+
+	$(document).ready(function( $ ) {
+		tabScrollToParent();
+		tabsTabActive();
+		pulsTabOpen();
+	});
+
+
+} )( jQuery, window );

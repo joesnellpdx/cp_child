@@ -15,6 +15,12 @@ function freesia_empire_enqueue_styles() {
 		get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr-custom.min.js',
 		false, '2.7.2'
 	);
+
+	wp_enqueue_script(
+		'puls_scripts',
+		get_stylesheet_directory_uri() . '/assets/js/pulsair.min.js',
+		array('jquery'),
+		NULL, true );
 }
 add_action( 'wp_enqueue_scripts', 'freesia_empire_enqueue_styles' );
 

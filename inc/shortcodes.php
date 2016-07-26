@@ -194,3 +194,63 @@ function grid_right_shortcode($atts, $content){
 	return $html;
 }
 add_shortcode( 'grid_right', 'grid_right_shortcode' );
+
+$tabs_divs = '';
+
+function tabs_group($atts, $content = null ) {
+	extract(shortcode_atts(array(
+		'title' => '',
+	), $atts));
+
+	global $tabs_divs;
+
+	$tabs_divs = '';
+
+	$output = '<div id="" class="puls-tabs">';
+	$output .= '<div class="puls-tabs__inner">';
+	$output.= '<span class="puls-tabs__title">' . $title . '</span>';
+	$output.= '<ul class="puls-tabs__ul">'.do_shortcode($content).'</ul>';
+	$output .= '<div class="puls-tabs__items">'.$tabs_divs.'</div>';
+	$output .= '</div>';
+	$output .= '</div>';
+
+	return $output;
+}
+
+
+function tab($atts, $content = null) {
+	global $tabs_divs;
+
+	extract(shortcode_atts(array(
+		'id' => '',
+		'title' => '',
+		'icon' => ''
+	), $atts));
+
+	if(empty($id))
+		$id = 'side-tab'.rand(100,999);
+
+	$output = '
+		        <li class="puls-tabs__tab">
+		            <a href="#'.$id.'" class="puls-tabs__tab-link">'.$title.'</a>
+		        </li>
+		    ';
+
+	$tabs_divs .= '<div id="'.$id.'" class="puls-tab-item">';
+	$tabs_divs .= '<div class="puls-tab-item__inner">';
+	$tabs_divs .= '<div class="puls-tab-item__title-contain">';
+	$tabs_divs .= '<h2 class="puls-tab-item__title">' . $title . '</h2>';
+	$tabs_divs .= '</div>';
+	$tabs_divs .= '<div class="puls-tab-item__content-contain">';
+	$tabs_divs .= do_shortcode($content);
+	//	$tabs_divs .= '<a href="#tab-side-container" class="puls-tab-item__close btn-primary btn-small" data-tab-id="' . $id . '">X Close</a>';
+	$tabs_divs .= '</div>';
+
+	$tabs_divs .= '</div>';
+	$tabs_divs .= '</div>';
+
+	return $output;
+}
+
+add_shortcode('tabs', 'tabs_group');
+add_shortcode('tab', 'tab');

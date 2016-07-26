@@ -238,5 +238,115 @@ h1.page-title--custom {
   .grid-right {
     width: 75%; } }
 
+.puls-tabs {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+  padding: 8px 0px;
+  padding: 0.5rem 0px; }
+  .puls-tabs__title {
+    display: block; }
+  .entry-content .puls-tabs__ul {
+    display: block;
+    display: none;
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+    margin: 8px -8px -8px;
+    margin: 0.5rem -0.5rem -0.5rem; }
+  .puls-tabs__items {
+    margin: 8px 0px;
+    margin: 0.5rem 0px; }
+  .puls-tabs__tab {
+    padding: 8px;
+    padding: 0.5rem; }
+  .puls-tabs__tab-link {
+    font-weight: normal;
+    line-height: 1;
+    display: inline-block;
+    width: 100%;
+    margin: 0px;
+    margin: 0px;
+    padding: 1.2em 1.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    border: 0;
+    outline: none;
+    background: #6897e5; }
+    .puls-tabs__tab-link i {
+      font-size: 16px;
+      font-size: 1rem;
+      display: inline;
+      margin: 0 0.5em 0 0; }
+    .puls-tabs__tab-link.sr-active, .puls-tabs__tab-link:hover, .puls-tabs__tab-link:focus {
+      color: #FFF;
+      background: #225fc5; }
+  .js .puls-tabs__ul {
+    display: block; }
+  .js .puls-tabs__items {
+    position: relative; }
+  @media all and (min-width: 46.8rem) {
+    .puls-tabs__tab {
+      display: inline;
+      float: left;
+      width: 33.3333333333333%;
+      padding: 0.5rem; }
+    .puls-tabs__tab-link {
+      width: 100%;
+      margin-bottom: 0;
+      padding: 1rem 0px;
+      transition: all 0.4s ease-out;
+      text-align: center;
+      min-height: 62px;
+      width: 100%; }
+      .puls-tabs__tab-link i {
+        font-size: 2em;
+        display: block;
+        margin: 0 0 0.5rem 0; }
+      .puls-tabs__tab-link.sr-active {
+        border-color: #9e5406; } }
+  @media all and (min-width: 66rem) {
+    .puls-tabs__tab {
+      width: 16.66667%; } }
+
+.puls-tab-item {
+  width: 100%;
+  margin: 0px 0px 8px;
+  margin: 0px 0px 0.5rem;
+  border: 2px solid #6897e5;
+  background: #FFF; }
+  .puls-tab-item__inner {
+    display: block;
+    overflow: hidden;
+    padding: 16px;
+    padding: 1rem; }
+  .puls-tab-item__content-contain .img-list {
+    margin: 0px; }
+  .puls-tab-item__close {
+    display: none; }
+  .js .puls-tab-item {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out, opacity 1s ease-out;
+    opacity: 0; }
+    .js .puls-tab-item .btn-small {
+      width: auto;
+      margin-bottom: 0;
+      padding: 0.75em 1em;
+      text-align: right;
+      text-transform: none; }
+    .js .puls-tab-item.sr-active {
+      position: relative;
+      z-index: 5000;
+      opacity: 1; }
+    .js .puls-tab-item__close {
+      display: inline-block;
+      clear: both; }
+
 /*------------------------------------*    $SHAME
 \*------------------------------------*/
