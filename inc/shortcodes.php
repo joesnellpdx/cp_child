@@ -100,11 +100,8 @@ function cta_block_shortcode( $atts, $content ) {
 add_shortcode( 'cta_block', 'cta_block_shortcode' );
 
 /**
-[
-
-View our amazing products for the wine industry.
-
-[/cta_block]
+ * Get started button shortcode
+ * [get_started]
  */
 function get_started_shortcode($atts, $content){
 	$a = shortcode_atts( array(
