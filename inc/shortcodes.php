@@ -98,3 +98,31 @@ function cta_block_shortcode( $atts, $content ) {
 	return $html;
 }
 add_shortcode( 'cta_block', 'cta_block_shortcode' );
+
+/**
+[
+
+View our amazing products for the wine industry.
+
+[/cta_block]
+ */
+function get_started_shortcode($atts, $content){
+	$a = shortcode_atts( array(
+		'link' => '',
+	), $atts );
+
+	if(empty($link)){
+		$contact_url = network_site_url() . 'contact/';
+	} else {
+		$contact_url = $link;
+	}
+
+
+
+	$html = '';
+
+	$html .= '<a title="Get Started Now" href="' . $contact_url . '" class="btn-default btn-contact vivid">Get Started Now<span>❭</span></a>';
+
+	return $html;
+}
+add_shortcode( 'get_started', 'get_started_shortcode' );

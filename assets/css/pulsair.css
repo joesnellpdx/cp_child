@@ -20,6 +20,23 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 \*------------------------------------*/
 /*------------------------------------*    $Sanitize Variables
 \*------------------------------------*/
+/*------------------------------------*    $BUTTONS
+\*------------------------------------*/
+.btn-contact {
+  font-size: 13px;
+  line-height: 28px;
+  margin: 10px 0px 20px;
+  clear: both; }
+  .btn-contact span {
+    border-left: 1px solid #ccc;
+    bont-size: 16px;
+    line-height: 28px;
+    margin-left: 12px;
+    padding: 6px 0 8px 16px; }
+  .btn-contact.vivid:hover {
+    background-color: #94b5ec;
+    border-color: #94b5ec; }
+
 /*------------------------------------*	$MEDIA
 \*------------------------------------*/
 .img-fit {
