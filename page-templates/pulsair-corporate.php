@@ -37,7 +37,7 @@ if(!empty($p_subtitle)){
 if((!empty($p_grid)) && ($p_grid == 'on') ) {
 	echo pa_page_grids($the_page_id);
 }
-echo do_shortcode(get_post_field('post_content', $the_page_id));
+echo wpautop(do_shortcode(get_post_field('post_content', $the_page_id)));
 echo '</div>';
 echo '</div>';
 echo '</section';
