@@ -116,7 +116,7 @@ function get_started_shortcode($atts, $content){
 
 	$html = '';
 
-	$html .= '<a title="Get Started Now" href="' . $contact_url . '" class="btn-default btn-contact vivid">Get Started Now<span>❭</span></a>';
+	$html .= '<p class="btn-contain"><a title="Get Started Now" href="' . $contact_url . '" class="btn-default btn-contact vivid">Get Started Now<span>❭</span></a></p>';
 
 	return $html;
 }
