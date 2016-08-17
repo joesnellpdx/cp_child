@@ -151,6 +151,9 @@ h1.page-title--custom {
 .feature-content--grid {
   padding: 0px; }
 
+.our_feature .grid-title {
+  text-align: center; }
+
 .our_feature .feature-icon.feature-image {
   width: 100%;
   border-radius: 0px;
