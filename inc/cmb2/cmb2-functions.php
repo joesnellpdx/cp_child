@@ -34,6 +34,14 @@ function jspdx_register_pacorp_metabox( ) {
 
 	$meta_boxes->add_field( array(
 		'name'    => __( 'Subtitle / Descriptive Content', 'cmb2' ),
+		'id'      => $pa_prefix . 'subtitle-replace',
+		'desc'       => __( 'A small amount of text - centered (appears below title)', 'cmb2' ),
+		'type'    => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 2, ),
+	) );
+
+	$meta_boxes->add_field( array(
+		'name'    => __( 'Content Above Grid (when in use)', 'cmb2' ),
 		'id'      => $pa_prefix . 'subtitle',
 		'type'    => 'wysiwyg',
 		'options' => array( 'textarea_rows' => 10, ),

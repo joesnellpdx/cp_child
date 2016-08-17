@@ -6,6 +6,12 @@
     $CUSTOM LAYOUT
 \*------------------------------------*/
 
+.container_container {
+  &--align-left {
+    text-align: left;
+  }
+}
+
 .puls-quote {
   display: block;
   overflow: hidden;

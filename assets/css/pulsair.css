@@ -138,7 +138,8 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 h1.page-title--custom {
   font-size: 28px;
   line-height: 35px;
-  color: #545454; }
+  color: #545454;
+  text-align: center; }
   @media only screen and (max-width: 767px) {
     h1.page-title--custom {
       padding-bottom: 10px; } }
@@ -246,6 +247,9 @@ h1.page-title--custom {
 
 /*------------------------------------*    $CUSTOM LAYOUT
 \*------------------------------------*/
+.container_container--align-left {
+  text-align: left; }
+
 .puls-quote {
   display: block;
   overflow: hidden; }
