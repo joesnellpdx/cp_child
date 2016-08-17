@@ -183,3 +183,41 @@ function auto_copyright($year = 'auto'){
 	if(intval($year) < date('Y')){ echo intval($year) . ' - ' . date('Y'); }
 	if(intval($year) > date('Y')){ echo date('Y'); }
 }
+
+/******************* Freesia Empire Header Display *************************/
+function pulsair_header_display(){
+	$freesiaempire_settings = freesiaempire_get_theme_options();
+	$header_display = $freesiaempire_settings['freesiaempire_header_display'];
+	$header_logo = $freesiaempire_settings['freesiaempire-img-upload-header-logo'];
+	if ($header_display == 'header_text') { ?>
+		<div id="site-branding">
+			<?php if(is_home() || is_front_page()){ ?>
+			<h1 id="site-title"> <?php }else{?> <h2 id="site-title"> <?php } ?>
+					<a href="<?php echo esc_url(home_url('/'));?>" title="<?php echo esc_attr(get_bloginfo('name', 'display'));?>" rel="home"> <?php bloginfo('name');?> </a>
+					<?php if(is_home() || is_front_page() || is_search()){ ?>
+			</h1>  <!-- end .site-title -->
+		<?php } else { ?> </h2> <!-- end .site-title --> <?php }
+		$site_description = get_bloginfo( 'description', 'display' );
+		if($site_description){?>
+			<p id ="site-description"> <?php bloginfo('description');?> </p> <!-- end #site-description -->
+		<?php } ?>
+		</div> <!-- end #site-branding -->
+		<?php
+	} elseif ($header_display == 'header_logo') { ?>
+		<div id="site-branding"> <a href="<?php echo esc_url(esc_url( network_site_url() ));?>" title="Pulsair Systems" rel="home"> <img src="<?php echo esc_url($header_logo);?>" id="site-logo" alt="Pulsair Systems"></a> </div> <!-- end #site-branding -->
+	<?php } elseif ($header_display == 'show_both'){ ?>
+		<div id="site-branding"> <a href="<?php echo esc_url(esc_url( network_site_url() ));?>" title="Pulsair Systems" rel="home"> <img src="<?php echo esc_url($header_logo);?>" id="site-logo" alt="Pulsair Systems"></a>
+			<?php if(is_home() || is_front_page()){ ?>
+			<h1 id="site-title"> <?php }else{?> <h2 id="site-title"> <?php } ?>
+					<a href="<?php echo esc_url(home_url('/'));?>" title="<?php echo esc_attr(get_bloginfo('name', 'display'));?>" rel="home"> <?php bloginfo('name');?> </a>
+					<?php if(is_home() || is_front_page()){ ?> </h1> <!-- end .site-title -->
+		<?php }else{ ?> </h2> <!-- end .site-title -->
+		<?php }
+		$site_description = get_bloginfo( 'description', 'display' );
+		if($site_description){?>
+			<p id ="site-description"> <?php bloginfo('description');?> </p><!-- end #site-description -->
+		<?php } ?>
+		</div> <!-- end #site-branding -->
+	<?php }
+}
+add_action('pulsair_site_branding','pulsair_header_display');

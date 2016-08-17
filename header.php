@@ -27,7 +27,7 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 		}
 		echo '<div class="top-header">
 						<div class="container clearfix">';
-		do_action('freesiaempire_site_branding');
+		do_action('pulsair_site_branding');
 
 		echo '<div class="menu-toggle">      
 								<div class="line-one"></div>
