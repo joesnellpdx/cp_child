@@ -142,3 +142,27 @@ function pulsair_remove_empty_p( $content ) {
 		$newcontent);
 	return $newercontent;
 }
+
+/**
+ * Remove parent theme foooter stuff
+ */
+function my_site_footer() {
+	if ( is_active_sidebar( 'freesiaempire_footer_options' ) ) :
+		dynamic_sidebar( 'freesiaempire_footer_options' );
+	else:
+		echo '<div class="copyright">' .'© ' . get_the_time('Y') .' '; ?>
+		<a title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a>
+		</div>
+	<?php endif;
+}
+
+/**
+ * Remove parent theme foooter stuff
+ */
+function my_action_override() {
+
+	remove_action( 'freesiaempire_sitegenerator_footer', 'freesiaempire_site_footer' );
+	add_action( 'freesiaempire_sitegenerator_footer', 'my_site_footer' );
+
+}
+add_action( 'init', 'my_action_override' );
