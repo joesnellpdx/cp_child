@@ -149,10 +149,12 @@ function pulsair_remove_empty_p( $content ) {
 function my_site_footer() {
 	if ( is_active_sidebar( 'freesiaempire_footer_options' ) ) :
 		dynamic_sidebar( 'freesiaempire_footer_options' );
-	else:
-		echo '<div class="copyright">' .'© ' . get_the_time('Y') .' '; ?>
-		<a title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a>
+	else: ?>
+		<div class="copyright">Copyright &copy; <?php echo auto_copyright('2016'); ?>
+		<a title="Pulsair Systems" target="_blank" href="<?php echo esc_url( network_site_url() ); ?>">Pulsair Systems</a>
 		</div>
+
+
 	<?php endif;
 }
 
@@ -171,3 +173,13 @@ add_action( 'init', 'my_action_override' );
  * Enable shortcodes in widgets
  */
 add_filter('widget_text', 'do_shortcode');
+
+/**
+ * Auto copyright
+ */
+function auto_copyright($year = 'auto'){
+	if(intval($year) == 'auto'){ $year = date('Y'); }
+	if(intval($year) == date('Y')){ echo intval($year); }
+	if(intval($year) < date('Y')){ echo intval($year) . ' - ' . date('Y'); }
+	if(intval($year) > date('Y')){ echo date('Y'); }
+}
