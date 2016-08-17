@@ -25,7 +25,7 @@ function jspdx_register_pacorp_metabox( ) {
 	));
 
 	$meta_boxes->add_field( array(
-		'name'       => __( 'Title Display', 'cmb2' ),
+		'name'       => __( 'Title Display (Replace existing page title)', 'cmb2' ),
 //		'desc'       => __( 'field description (optional)', 'cmb2' ),
 		'id'         => $pa_prefix . 'title',
 		'type'       => 'text',
@@ -40,11 +40,50 @@ function jspdx_register_pacorp_metabox( ) {
 	) );
 
 	$meta_boxes->add_field( array(
+		'name'    => __( 'Hero Image', 'cmb2' ),
+		'id'      => $pa_prefix . 'herobg',
+		'type'    => 'file',
+	) );
+
+	$meta_boxes->add_field( array(
+		'name'       => __( 'Hero Title', 'cmb2' ),
+		'id'         => $pa_prefix . 'herotitle',
+		'type'       => 'text',
+		'show_on_cb' => 'cmb2_hide_if_no_cats',
+	) );
+
+	$meta_boxes->add_field( array(
+		'name'    => __( 'Hero Content', 'cmb2' ),
+		'id'      => $pa_prefix . 'herocontent',
+		'type'    => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 10, ),
+	) );
+
+	$meta_boxes->add_field( array(
+		'name'       => __( 'Hero Link', 'cmb2' ),
+		'id'         => $pa_prefix . 'herolink',
+		'type' => 'text_url',
+	) );
+
+	$meta_boxes->add_field( array(
+		'name'       => __( 'Hero Link Text', 'cmb2' ),
+		'default' => 'Learn More',
+		'id'         => $pa_prefix . 'herolinktext',
+		'type'       => 'text',
+		'show_on_cb' => 'cmb2_hide_if_no_cats',
+	) );
+
+	$meta_boxes->add_field( array(
+		'name'    => __( 'Use light colored text in hero.', 'cmb2' ),
+		'id'      => $pa_prefix . 'herocolor',
+		'type'    => 'checkbox'
+	) );
+
+	$meta_boxes->add_field( array(
 		'name'    => __( 'Display custom grid (from admin fields).', 'cmb2' ),
 		'id'      => $pa_prefix . 'grid',
 		'type'    => 'checkbox'
 	) );
-
 
 }
 add_filter( 'cmb2_init', 'jspdx_register_pacorp_metabox' );

@@ -22,20 +22,24 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 \*------------------------------------*/
 /*------------------------------------*    $BUTTONS
 \*------------------------------------*/
-.btn-contact {
+.btn-contact,
+.btn-hero {
   font-size: 13px;
   line-height: 28px;
   margin: 10px 0px 20px;
   clear: both; }
-  .btn-contain > .btn-contact {
+  .btn-contain > .btn-contact, .btn-contain >
+  .btn-hero {
     margin: 0px; }
-  .btn-contact span {
+  .btn-contact span,
+  .btn-hero span {
     border-left: 1px solid #ccc;
     bont-size: 16px;
     line-height: 28px;
     margin-left: 12px;
     padding: 6px 0 8px 16px; }
-  .btn-contact.vivid:hover {
+  .btn-contact.vivid:hover,
+  .btn-hero.vivid:hover {
     background-color: #94b5ec;
     border-color: #94b5ec; }
 
@@ -60,6 +64,31 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
     top: 0;
     left: 0;
     width: 100%; }
+
+.pa-hero {
+  color: #545454; }
+  .pa-hero__content {
+    position: relative;
+    padding: 51.2px 0px;
+    padding: 3.2rem 0rem;
+    max-width: 45em;
+    font-size: 16px;
+    line-height: 24px; }
+  .pa-hero__content-inner {
+    max-width: 30em; }
+  .pa-hero__title {
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 400;
+    color: #545454; }
+  .pa-hero--light {
+    color: #FFF; }
+    .pa-hero--light .pa-hero__title {
+      color: #FFF; }
+  @media only screen and (min-width: 1023px) {
+    .pa-hero__title {
+      font-size: 36px;
+      line-height: 43px; } }
 
 .six-column {
   float: left;

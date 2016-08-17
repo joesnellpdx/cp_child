@@ -130,7 +130,55 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 <?php if (!is_page_template('page-templates/freesiaempire-corporate.php') ){
 	if(is_page_template('three-column-blog-template.php') || is_page_template('our-team-template.php') || is_page_template('about-us-template.php') || is_page_template('portfolio-template.php') ){
 
-	}else{?>
+	}else{
+
+		global $post, $wp_query;
+		if(is_home()){
+			$the_page_id = $wp_query->queried_object->ID;
+		} else {
+			$the_page_id = $post->ID;
+		}
+
+		$p_herobg = get_post_meta( $the_page_id, '_pacorp_herobg_id', true );
+		$p_herotitle = get_post_meta( $the_page_id, '_pacorp_herotitle', true );
+		$p_herocontent = get_post_meta( $the_page_id, '_pacorp_herocontent', true );
+		$p_herolink  = get_post_meta( $the_page_id, '_pacorp_herolink', true);
+		$p_herolinktext  = get_post_meta( $the_page_id, '_pacorp_herolinktext', true);
+		$p_herocolor  = get_post_meta( $the_page_id, '_pacorp_herocolor', true);
+
+		if(!empty($p_herobg)){
+
+			$imageID = $p_herobg;
+			$img_src = wp_get_attachment_image_url( $imageID, 'rwd-small' );
+			$img_fallback = wp_get_attachment_image_url( $imageID, 'rwd-large' );
+			$srcset_value = wp_get_attachment_image_srcset( $imageID, 'full' );
+			$srcset       = $srcset_value ? ' srcset="' . esc_attr( $srcset_value ) . '"' : '';
+			$alt          = get_post_meta( $imageID, '_wp_attachment_image_alt', true );
+
+			if((!empty($p_herocolor)) && ($p_herocolor == 'on') ) {
+				$p_hero_class = ' pa-hero--light';
+			} else {
+				$p_hero_class = '';
+			}
+
+
+			echo '<div class="pa-hero' . $p_hero_class . '">';
+			echo '<figure class="pa-hero__bg img-fit">';
+			echo '<img src="' . $img_src . '" ' . $srcset . ' sizes="100vw" alt="' . $alt . '" data-fallback-img="' . $img_fallback . '">';
+			echo '<div class="pa-hero__content container clearfix">';
+			echo '<div class="pa-hero__content-inner clearfix">';
+			echo '<h2 class="pa-hero__title">' . $p_herotitle . '</h2>';
+			echo '<p class="pa-hero__text">' . $p_herocontent . '</p>';
+			echo '<p class="btn-contain">';
+			echo '<a title="' . $p_herolinktext . '" href="' . $p_herolink . '" class="btn-default btn-hero vivid">' . $p_herolinktext . '<span>❭</span></a>';
+			echo '</p>';
+			echo '</div>';
+			echo '</div>';
+			echo '</figure>';
+			echo '</div>';
+		}
+		?>
+
 		<div class="container clearfix">
 	<?php }
 } ?>
