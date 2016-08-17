@@ -166,3 +166,8 @@ function my_action_override() {
 
 }
 add_action( 'init', 'my_action_override' );
+
+/**
+ * Enable shortcodes in widgets
+ */
+add_filter('widget_text', 'do_shortcode');
