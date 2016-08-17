@@ -165,7 +165,7 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 			echo '<div class="pa-hero' . $p_hero_class . '">';
 			echo '<figure class="pa-hero__bg img-fit">';
 			echo '<img src="' . $img_src . '" ' . $srcset . ' sizes="100vw" alt="' . $alt . '" data-fallback-img="' . $img_fallback . '">';
-			echo '<div class="pa-hero__content container clearfix">';
+			echo '<div class="pa-hero__content clearfix">';
 			echo '<div class="pa-hero__content-inner clearfix">';
 			echo '<h2 class="pa-hero__title">' . $p_herotitle . '</h2>';
 			echo '<p class="pa-hero__text">' . $p_herocontent . '</p>';

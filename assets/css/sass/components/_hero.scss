@@ -3,6 +3,8 @@
   &__content {
     position: relative;
     padding: $space-double 0rem;
+    padding: 12% 10% 12%;
+    min-height: 400px;
     max-width: 45em;
     font-size: 16px;
     line-height: 24px;
@@ -24,6 +26,9 @@
         color: $white;
       }
     }
+  }
+  .btn-contain {
+    margin-bottom: 0;
   }
   @media only screen and (min-width: 1023px) {
     &__title {

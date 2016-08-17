@@ -71,6 +71,8 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
     position: relative;
     padding: 51.2px 0px;
     padding: 3.2rem 0rem;
+    padding: 12% 10% 12%;
+    min-height: 400px;
     max-width: 45em;
     font-size: 16px;
     line-height: 24px; }
@@ -85,6 +87,8 @@ version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
     color: #FFF; }
     .pa-hero--light .pa-hero__title {
       color: #FFF; }
+  .pa-hero .btn-contain {
+    margin-bottom: 0; }
   @media only screen and (min-width: 1023px) {
     .pa-hero__title {
       font-size: 36px;
