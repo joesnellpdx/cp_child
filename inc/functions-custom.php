@@ -53,6 +53,7 @@ function twenty_eleven_child_add_image_size() {
 	add_image_size( 'rwd-medium', 800, 480 );
 	add_image_size( 'rwd-large', 1200, 720 );
 	add_image_size( 'rwd-mediumx2', 1600, 960 );
+	add_image_size( 'rwd-large2', 1800, 1080 );
 	add_image_size( 'rwd-xl', 2000, 1200 );
 	add_image_size( 'rwd-largex2', 2400, 1440 );
 	add_image_size( 'rwd-xlx2', 4000, 2400 );
