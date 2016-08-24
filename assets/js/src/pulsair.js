@@ -44,6 +44,14 @@
 	}
 
 	/**
+	 * Fitvids
+     */
+	function fitVideo() {
+		$(".video, .tm-vid, .puls-video").fitVids();
+		$("#content").fitVids();
+	}
+
+	/**
 	 *  hasClass, takes two params: element and classname
 	 * @param element
 	 * @param classname
@@ -117,6 +125,7 @@
 		tabScrollToParent();
 		tabsTabActive();
 		pulsTabOpen();
+		fitVideo();
 	});
 
 

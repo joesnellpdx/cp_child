@@ -36,16 +36,18 @@ if(!empty($p_subtitle)){
 }
 
 if(!empty($p_subcontent)){
-	echo '<div class="container_container container_container--align-left freesia-animation fadeInUp">' . wpautop($p_subcontent) . '</div>';
+	echo '<div class="container_container container_container--align-left freesia-animation fadeInUp">' . wpautop(do_shortcode($p_subcontent)) . '</div>';
 }
 
 if((!empty($p_grid)) && ($p_grid == 'on') ) {
 	echo pa_page_grids($the_page_id);
 }
-echo '<div class="container_container container_container--align-left freesia-animation fadeInUp">' . wpautop(do_shortcode(get_post_field('post_content', $the_page_id))) . '</div>';
+//$custom_cont = wpautop(do_shortcode(get_post_field('post_content', $the_page_id)));
+//$custom_cont = the_content();
+echo '<div class="container_container container_container--align-left freesia-animation fadeInUp">' . the_content() . '</div>';
 echo '</div>';
 echo '</div>';
-echo '</section';
+echo '</section>';
 //	echo '</div> <!-- entry-content clearfix-->';
 if($freesiaempire_settings['freesiaempire_disable_features'] != 1){
 	echo '<!-- Our Feature ============================================= -->';

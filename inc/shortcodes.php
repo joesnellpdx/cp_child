@@ -254,3 +254,18 @@ function tab($atts, $content = null) {
 
 add_shortcode('tabs', 'tabs_group');
 add_shortcode('tab', 'tab');
+
+function puls_video_shortcode($atts, $content = null) {
+	extract(shortcode_atts(array(
+		'url' 	=> ''
+	), $atts));
+
+	global $wp_embed;
+	$post_embed = $wp_embed->run_shortcode('[embed]' . $url . '[/embed]');
+
+	$html = '';
+	$html .= $post_embed;
+
+	return $html;
+}
+add_shortcode('embed_video', 'puls_video_shortcode');

@@ -222,3 +222,17 @@ function pulsair_header_display(){
 	<?php }
 }
 add_action('pulsair_site_branding','pulsair_header_display');
+
+// VIDEO - disabled with jetpack
+function my_embed_oembed_html($html, $url, $attr, $post_id) {
+	return '<div class="puls-video">' . $html . '</div>';
+}
+add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
+
+function remove_youtube_controls($code){
+	if(strpos($code, 'youtu.be') !== false || strpos($code, 'youtube.com') !== false){
+		$return = preg_replace("@src=(['\"])?([^'\">\s]*)@", "src=$1$2&modestbranding=1&origin=" . get_bloginfo('url') . "&showinfo=0&rel=0", $code);
+		return $return;
+	}
+	return $code;
+}

@@ -26,6 +26,25 @@ ul, ol {
   margin: 0 0 20px 0;
   padding-left: 1em; }
 
+/*------------------------------------*	$MEDIA
+\*------------------------------------*/
+/* Flexible Media */
+img,
+video,
+object,
+.wp-caption {
+  max-width: 100%;
+  height: auto; }
+
+embed,
+iframe,
+object,
+video,
+.puls-video {
+  max-width: 100%;
+  margin-bottom: 25.6px;
+  margin-bottom: 1.6rem; }
+
 /*------------------------------------*    $BUTTONS
 \*------------------------------------*/
 .btn-contact,

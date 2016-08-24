@@ -11,6 +11,7 @@ module.exports = {
 		src: [
 			// 'assets/js/vendor/vendor-file.js',
 			'bower_components/imagesloaded/imagesloaded.pkgd.js',
+			'assets/js/vendor/jquery.fitvids.js',
 			'assets/js/src/pulsair.js'
 		],
 			dest: 'assets/js/pulsair.js'
