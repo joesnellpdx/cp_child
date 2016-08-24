@@ -19,11 +19,59 @@
     font-weight: 400;
     color: #545454;
   }
-  &--light {
-    color: $white;
+  &--white {
+    color: white;
     .pa-hero {
       &__title {
-        color: $white;
+        color: white;
+      }
+    }
+  }
+  &--black {
+    color: #000;
+    .pa-hero {
+      &__title {
+        color: #000;
+      }
+    }
+  }
+  &--navy {
+    color: navy;
+    .pa-hero {
+      &__title {
+        color: navy;
+      }
+    }
+  }
+  &--blue {
+    color: blue;
+    .pa-hero {
+      &__title {
+        color: blue;
+      }
+    }
+  }
+  &--red {
+    color: red;
+    .pa-hero {
+      &__title {
+        color: red;
+      }
+    }
+  }
+  &--yellow {
+    color: yellow;
+    .pa-hero {
+      &__title {
+        color: yellow;
+      }
+    }
+  }
+  &--green {
+    color: green;
+    .pa-hero {
+      &__title {
+        color: green;
       }
     }
   }

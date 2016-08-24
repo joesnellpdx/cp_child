@@ -155,8 +155,8 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 			$srcset       = $srcset_value ? ' srcset="' . esc_attr( $srcset_value ) . '"' : '';
 			$alt          = get_post_meta( $imageID, '_wp_attachment_image_alt', true );
 
-			if((!empty($p_herocolor)) && ($p_herocolor == 'on') ) {
-				$p_hero_class = ' pa-hero--light';
+			if((!empty($p_herocolor)) ) {
+				$p_hero_class = ' pa-hero--' . $p_herocolor;
 			} else {
 				$p_hero_class = '';
 			}

@@ -81,10 +81,29 @@ function jspdx_register_pacorp_metabox( ) {
 		'show_on_cb' => 'cmb2_hide_if_no_cats',
 	) );
 
+//	$meta_boxes->add_field( array(
+//		'name'    => __( 'Use light colored text in hero.', 'cmb2' ),
+//		'id'      => $pa_prefix . 'herocolor',
+//		'type'    => 'checkbox'
+//	) );
+
 	$meta_boxes->add_field( array(
-		'name'    => __( 'Use light colored text in hero.', 'cmb2' ),
-		'id'      => $pa_prefix . 'herocolor',
-		'type'    => 'checkbox'
+		'name'             => 'Custom Text Color',
+		'desc'             => 'Select an option',
+		'id'               => $pa_prefix . 'herocolor',
+		'type'             => 'select',
+		'show_option_none' => false,
+		'default'          => 'standard',
+		'options'          => array(
+			'default'       => __( 'Standard (dark)', 'cmb2' ),
+			'white'         => __( 'White', 'cmb2' ),
+			'black'         => __( 'Black', 'cmb2' ),
+			'navy'          => __( 'Navy', 'cmb2' ),
+			'blue'          => __( 'Blue', 'cmb2' ),
+			'red'           => __( 'Red', 'cmb2' ),
+			'yellow'        => __( 'Yellow', 'cmb2' ),
+			'green'         => __( 'Green', 'cmb2' ),
+		),
 	) );
 
 	$meta_boxes->add_field( array(

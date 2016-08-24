@@ -89,10 +89,34 @@ ul, ol {
     line-height: 31px;
     font-weight: 400;
     color: #545454; }
-  .pa-hero--light {
-    color: #FFF; }
-    .pa-hero--light .pa-hero__title {
-      color: #FFF; }
+  .pa-hero--white {
+    color: white; }
+    .pa-hero--white .pa-hero__title {
+      color: white; }
+  .pa-hero--black {
+    color: #000; }
+    .pa-hero--black .pa-hero__title {
+      color: #000; }
+  .pa-hero--navy {
+    color: navy; }
+    .pa-hero--navy .pa-hero__title {
+      color: navy; }
+  .pa-hero--blue {
+    color: blue; }
+    .pa-hero--blue .pa-hero__title {
+      color: blue; }
+  .pa-hero--red {
+    color: red; }
+    .pa-hero--red .pa-hero__title {
+      color: red; }
+  .pa-hero--yellow {
+    color: yellow; }
+    .pa-hero--yellow .pa-hero__title {
+      color: yellow; }
+  .pa-hero--green {
+    color: green; }
+    .pa-hero--green .pa-hero__title {
+      color: green; }
   .pa-hero .btn-contain {
     margin-bottom: 0; }
   @media only screen and (min-width: 1023px) {
