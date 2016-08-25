@@ -44,7 +44,7 @@ if((!empty($p_grid)) && ($p_grid == 'on') ) {
 }
 //$custom_cont = wpautop(do_shortcode(get_post_field('post_content', $the_page_id)));
 //$custom_cont = the_content();
-echo '<div class="container_container container_container--align-left freesia-animation fadeInUp">' . the_content() . '</div>';
+echo '<div class="container_container container_container--align-left freesia-animation fadeInUp">' . apply_filters( 'the_content', get_the_content() ) . '</div>';
 echo '</div>';
 echo '</div>';
 echo '</section>';
