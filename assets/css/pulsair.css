@@ -101,11 +101,12 @@ video,
     padding: 51.2px 0px;
     padding: 3.2rem 0rem;
     padding: 12% 10% 12%;
-    font-size: 16px;
-    line-height: 24px; }
+    font-size: 18px;
+    line-height: 1.245;
+    font-weight: normal; }
   .pa-hero__title {
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 45px;
+    line-height: 1.2;
     font-weight: 400;
     color: #545454; }
   .pa-hero--white {
@@ -138,10 +139,13 @@ video,
       color: green; }
   .pa-hero .btn-contain {
     margin-bottom: 0; }
-  @media only screen and (min-width: 1023px) {
+  @media only screen and (min-width: 46.8rem) {
     .pa-hero__title {
-      font-size: 36px;
-      line-height: 43px; } }
+      font-size: 60px;
+      line-height: 1.2;
+      font-weight: bold; }
+    .pa-hero__content {
+      font-size: 24px; } }
 
 .six-column {
   float: left;

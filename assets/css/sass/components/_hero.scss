@@ -10,12 +10,13 @@
     position: relative;
     padding: $space-double 0rem;
     padding: 12% 10% 12%;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 1.245;
+    font-weight: normal;
   }
   &__title {
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 45px;
+    line-height: 1.2;
     font-weight: 400;
     color: #545454;
   }
@@ -78,10 +79,17 @@
   .btn-contain {
     margin-bottom: 0;
   }
-  @media only screen and (min-width: 1023px) {
+  @media only screen and (min-width: $bp-med) {
     &__title {
-      font-size: 36px;
-      line-height: 43px;
+      font-size: 60px;
+      line-height: 1.2;
+      font-weight: bold;
     }
+    &__content {
+      font-size: 24px;
+    }
+  }
+  @media only screen and (min-width: 1023px) {
+
   }
 }
